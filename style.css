@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400;1,500&display=swap');
+
+:root {
+  --form-bg: rgba(0, 0, 0, 0.55);
+  --bg-purple-overlay: rgba(100, 100, 175, 0.8);
+  --submit-btn-color: rgb(61, 174, 104);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', sans-serif;
+  background: linear-gradient(0deg, var(--bg-purple-overlay), var(--bg-purple-overlay)), url('https://cdn.freecodecamp.org/testable-projects-fcc/images/survey-form-background.jpeg') no-repeat fixed top/cover;
+  background-blend-mode: normal;
+  color: white;
+  min-width: 305px;
+}
+
+h1,
+p {
+  text-align: center;
+}
+
+h1 {
+  font-weight: 400;
+}
+
+p {
+  font-style: italic;
+  font-weight: 200;
+  font-size: 1.25rem;
+}
+
+#survey-form {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  padding: 2.5em;
+  max-width: 720px;
+  margin: auto;
+  background-color: var(--form-bg);
+  border-radius: 6px;
+}
+
+#survey-form label {
+  margin-bottom: .5em;
+  font-size: 1.15rem;
+  font-weight: 300;
+}
+
+#survey-form > div {
+  display: flex;
+  flex-direction: column;
+}
+
+#survey-form > div:first-child {
+  gap: 1.5em;
+}
+
+#survey-form > div:first-child > div {
+  display: flex;
+  flex-direction: column;
+}
+
+#survey-form > div:first-child > div > input,
+textarea,
+select {
+  font-family: inherit;
+  font-size: inherit;
+  padding: .4em .7em;
+  border-radius: 4px;
+  font-size: 1rem;
+  border: none;
+}
+
+.optional {
+  font-size: .85rem;
+}
+
+select {
+  background-color: white;
+}
+
+option {
+  appearance: none;
+  font-size: .95rem;
+}
+
+#survey-form > div:nth-child(2) label,
+#survey-form > div:nth-child(4) label {
+  display: flex;
+  gap: .5em;
+  align-items: center;
+}
+
+#survey-form > div:nth-child(2) label > input[type='radio'],
+#survey-form > div:nth-child(4) label > input[type='checkbox'] {
+  margin: 0;
+  font-size: 2rem;
+  width: 24px;
+  height: 24px;
+}
+
+#submit {
+  cursor: pointer;
+  background-color: var(--submit-btn-color);
+  border: none;
+  border-radius: 4px;
+  padding: .6em;
+  font-family: inherit;
+  font-size: 1.15rem;
+  color: inherit;
+  margin-bottom: 1em;
+}
